@@ -29,5 +29,8 @@
     "diagram",
     "websequencediagrams",
     "websequencediagrams.com"
-  ]
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
 }
