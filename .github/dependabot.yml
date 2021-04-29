@@ -1,0 +1,17 @@
+version: 2
+registries:
+  npm-registry-repo-onegini-com-artifactory-api-npm-public-npm:
+    type: npm-registry
+    url: https://repo.onegini.com/artifactory/api/npm/public-npm
+    username: "${{secrets.NPM_REGISTRY_REPO_ONEGINI_COM_ARTIFACTORY_API_NPM_PUBLIC_NPM_USERNAME}}"
+    password: "${{secrets.NPM_REGISTRY_REPO_ONEGINI_COM_ARTIFACTORY_API_NPM_PUBLIC_NPM_PASSWORD}}"
+
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "04:00"
+  open-pull-requests-limit: 10
+  registries:
+  - npm-registry-repo-onegini-com-artifactory-api-npm-public-npm
